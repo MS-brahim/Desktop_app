@@ -9,9 +9,7 @@ How to operate a project
 2. git clone https://github.com/MS-brahim/Desktop_app
 3. cd file//: .../patientBack 
   - npm i
-  - npm test
-4. cd file//: .../patientFront
+  - npm start
+4. cd file//: .../Covid-App
   - npm i
   - npm start
-5. cd C:\Program Files\MongoDB\Server\4.4\bin> 
-  - mongod --dbpath "C://.../patientBack/data/db
