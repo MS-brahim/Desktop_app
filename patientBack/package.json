@@ -4,8 +4,7 @@
   "description": "partie patient",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon app.js",
-    "start": "electron ."
+    "start": "nodemon app.js"
   },
   "author": "brahim",
   "license": "ISC",

@@ -12,7 +12,7 @@ router.post('/', async (req, res, next)=>{
     const fiche = new Fiche({
     patientID: req.body.patientID,
     questionID:req.body.questionID,
-    medecinID: req.body.medecinID
+    // medecinID: req.body.medecinID
     });
     try {
         const results = await fiche.save();
@@ -32,9 +32,9 @@ router.get('/', async (req, res, next)=>{
     }
 });
 
-router.patch('/:id', async (req, res, next)=>{
+router.patch('/update/:id', async (req, res, next)=>{
     try {
-        const updateFiche = await Fiche.updateMany(
+        const updateFiche = await Fiche.updateOne(
             {_id: req.params.id},
             {$set:{result_test:req.body.result_test}});
             
@@ -45,11 +45,21 @@ router.patch('/:id', async (req, res, next)=>{
     }
 });
 
+// Remove fiche
+router.delete('/remove/:id', async (req, res, next)=>{
+    try {
+        const fiche = await Fiche.remove({_id:req.params.id});
+        res.json(fiche);
+    } catch (err) {
+        res.json({message:err});
+    }
+});
+
 // find fiche by Object id 
-router.get('/:id/print', async (req, res, next)=>{
+router.get('/:id', async (req, res, next)=>{
    
     try {
-        const fiche = await Fiche.findById(req.params.id);
+        const fiche = await Fiche.findById(req.params.id).populate('patientID').populate('questionID')
         res.json(fiche);
         console.log(fiche._id)
     } catch (err) {

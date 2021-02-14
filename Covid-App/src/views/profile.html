@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>Covid-19</title>
+    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+
+</head>
+
+<body>
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        <div class="scrollbar-inner">
+            <div class="sidenav-header  align-items-center">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="../assets/images/logo.png" class="navbar-brand-img" alt="...">
+                </a>
+            </div>
+            <div class="navbar-inner">
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="profile.html">
+                                <i class="ni ni-single-02 text-primary"></i>
+                                <span class="nav-link-text">Add Doctor</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">
+                                <i class="ni ni-tv-2 text-yellow"></i>
+                                <span class="nav-link-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="statistique.html">
+                                <i class="ni ni-bullet-list-67 text-yellow"></i>
+                                <span class="nav-link-text">Service Statistique</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="chart.html">
+                                <i class="ni ni-chart-pie-35 text-yellow"></i>
+                                <span class="nav-link-text">Chart</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../views/index.html">
+                                <i class="ni ni-key-25 text-info"></i>
+                                <span class="nav-link-text">LogOut</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr class="my-3">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content" id="panel">
+        <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                        <div class="form-group mb-0">
+                            <div class="input-group input-group-alternative input-group-merge">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                </div>
+                                <input class="form-control" placeholder="Search" type="text">
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+                    </form>
+                    <ul class="navbar-nav align-items-center  ml-md-auto ">
+
+
+
+                    </ul>
+                    <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="media align-items-center">
+                                    <span class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="../assets/img/theme/download.png">
+                  </span>
+                                    <div class="media-body  ml-2  d-none d-lg-block">
+                                        <span class="mb-0 text-sm  font-weight-bold">A D M I N</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu  dropdown-menu-right ">
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome!</h6>
+                                </div>
+
+
+
+                                <div class="dropdown-divider"></div>
+                                <a href="../views/adminLogin.html" class="dropdown-item">
+                                    <i class="ni ni-user-run"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header pb-6 d-flex align-items-center" style="min-height: 300px; background-image: url(../assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+            <span class="mask bg-gradient-default opacity-8"></span>
+        </div>
+        <div class="container-fluid mt--6">
+            <div class="row">
+
+                <div class="col-xl-12 order-xl-1">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">Add Doctor </h3>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <h6 class="heading-small text-muted mb-4">Doctor information</h6>
+                                <div class="pl-lg-4">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-username">First Name</label>
+                                                <input type="text" id="fname" class="form-control" placeholder="First Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Last Name</label>
+                                                <input type="email" id="lName" class="form-control" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-first-name">Phone</label>
+                                                <input type="text" id="phone" class="form-control" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-last-name">Email</label>
+                                                <input type="text" id="email" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-last-name">Cin</label>
+                                                <input type="text" id="cin" class="form-control" placeholder="Code Identité Nationale  ">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-last-name">Password</label>
+                                                <input type="text" id="password" class="form-control" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <button type="button" id="add-order" class="btn btn-primary">Add Doctor</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        if (typeof module === "object") {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script src="../script/main.js"></script>
+    <script>
+        if (window.module) module = window.module;
+    </script>
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="../assets/js/argon.js?v=1.2.0"></script>
+    <script src="../script/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+</body>
+
+</html>
